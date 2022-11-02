@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/*/ global /*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(123, 112, 171);
+  color: #fdfdfd;
+  font-family: 'Press Start 2P', cursive;
+}
+
+
+/*/ start screen /*/
+#game {
+  display: none;
+}
+
+.overlay-screen {
+  height: 100vh; 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  gap: 2em;
+}
+
+.overlay-screen h4 {
+  color: rgb(174, 156, 192);
+}
+
+
+/*/ game screen /*/
+.game-screen {
+  height: 100vh;  
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em; 
+}
+
+.game-header {
+  margin: 1em 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.score {
+  color: #fdfdfd;
+}
+
+
+#pause-button {
+  padding: 7px 10px;
+  border-radius: 0.5em;
+  border: 1px solid #fdfdfd;
+  background-color: transparent;
+  color: #fdfdfd;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.5em;
+}
+
+
+.board{
+    width: 200px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(139, 129, 167, 0.405);
+    border: 3px solid rgb(174, 156, 192); 
+    border-radius: 0.2em;
+    border-bottom: none;
+}
+
+.board div{
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgb(123, 112, 171);
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+#mini-board {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(139, 129, 167, 0.405);
+  border: 2px solid rgb(174, 156, 192); 
+  border-radius: 0.2em;
+}
+  
+#mini-board div {
+  height: 10px;
+  width: 10px;
+  box-sizing: border-box;
+  border: 1px solid rgb(123, 112, 171);
+}
+
+.game-moves  {
+ text-align: center;
+}
+
+.game-keys {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(123, 112, 171);
+  border: 3px solid rgb(174, 156, 192); 
+  border-radius: 0.2em;
+  border-top: none;
+  z-index: 10;
+}
+
+  
+#game-over {
+  color: red;
+  display: none;
+  text-align: center;
+  animation: blink 0.9s infinite;
+  margin: 1em;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  61% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+}
+
