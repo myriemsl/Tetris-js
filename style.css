@@ -34,6 +34,16 @@ body {
   animation: blink 0.8s infinite;
 }
 
+#start-button {
+  display: none;
+  padding: 10px 15px;
+  border-radius: 0.5em;
+  border: 1px solid rgb(174, 156, 192);
+  background-color: transparent;
+  color: rgb(174, 156, 192);
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.7em;
+}
 
 /*/ game screen /*/
 .game-screen {
@@ -144,3 +154,12 @@ body {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .overlay-screen h4 {
+    display: none;
+  }
+
+  #start-button {
+    display: block;
+  }
+}

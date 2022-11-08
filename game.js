@@ -272,6 +272,16 @@ document.addEventListener('DOMContentLoaded', () => {
  }
 
  // start game screen
+ /// for mobile view
+const start = document.getElementById("start-button");
+start.addEventListener("click", startGame);
+function startGame() {
+    document.getElementById("start-screen").style.display = "none";
+    document.getElementById("game").style.display = "block";  
+    getTetromino()
+};
+
+ /// for desktop and ipad view
  function playGame(event) {
    if (event.keyCode === 13) {
 
@@ -280,8 +290,8 @@ document.addEventListener('DOMContentLoaded', () => {
      document.getElementById("game").style.display = "block";  
 
      getTetromino()
-
     }
   }
  document.addEventListener("keydown", playGame)
 })
+
